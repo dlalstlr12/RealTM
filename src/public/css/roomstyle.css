@@ -1,0 +1,2655 @@
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Web Fonts - Source Sans Pro */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+/* Web Fonts - NoonNoo */
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Common CSS */
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --black-color: #212121;
+  /* --header-background-color: #160404; */
+  /* --main-background-color: #c4c4c4; */
+  --chatBox-background-color: rgb(51, 52, 54);
+  --controler-background-color: rgb(51, 52, 54);
+  --green-icon-color: #23c552;
+  --red-icon-color: #f85031;
+  --modal-box-color: #bba38e;
+  --modal-btn-color: #62ccff;
+}
+
+ * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+/* Header */
+header {
+  /* position: fixed; */
+  width: 100%;
+  padding: 0px;
+  z-index: 10;
+  background-color: #fff;
+}
+
+header.active {
+  background-color: #222;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    /* position: fixed; */
+    width: 1480px;
+    height : 110px;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 7px;
+    /* padding-bottom: 25px; */
+}
+
+.logo {
+    /* position: fixed; */
+    float: left;
+    font-size: 28px;
+}
+
+.menu {
+    /* position: fixed; */
+    float: right;
+    padding-top: 25px;
+    line-height: 31px;
+    padding-left: 30%;
+    display : flex;
+    flex-direction: row;
+    justify-content : center;
+    margin-right: 5px;
+}
+
+.menu a {
+    /* position: fixed; */
+    float: left;
+    display: block;
+    margin: 15px;
+    font-size: 22px;
+    color: #222;
+}
+
+body {
+  font-family: 'NEXON Lv2 Gothic', sans-serif;
+  font-size: 18px;
+  line-height: 2.0em;
+  margin: 0;
+  background-color: #222;
+  color: #222;
+  color: var(--black-color);
+}
+
+main { /*방 입장*/
+  border: 3px solid #222;
+  height: 81.5vh;
+  width: 100%;
+  /* height: 85vh; */
+  /* background-color: var(--main-background-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome form {
+  width: 600px;
+  height: 450px;
+  background-color: #adadad;
+  /* border: 2px solid var(--header-background-color); */
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome input {
+  width: 80%;
+  height: 10%;
+  padding: 3px 10px;
+  margin-bottom: 30px;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#welcome input::placeholder {
+  color: whitesmoke;
+}
+
+#welcome input:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#welcome button {
+  width: 80%;
+  height: 10%;
+  margin-top: 10px;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  transition: all 0.1s ease-in-out;
+}
+
+#welcome button:hover {
+  background-color: #c8cfdf;
+  color: var(--black-color);
+}
+
+#public_room {
+  position: relative;
+  overflow-y : auto; /* 스크롤 */
+  overflow-wrap : break-word; /* 스크롤 */
+  top: 7%;
+  color: white;
+  width: 90%;
+  height: 90%;
+  border: 1px solid powderblue;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#public_room h4 {
+  font-size: 22px;
+  text-align: center;
+}
+
+#public_room .chat-rooms { 
+  letter-spacing: 1px;
+}
+
+.call {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.flex-container { /*흰색박스*/
+  display: flex;
+  margin: 5px;
+  border:1px solid var(--chatBox-background-color);
+  border-radius: 10px;
+  background-color: var(--chatBox-background-color);
+  font-size: 24px;
+  position: relative;
+  width: 18%;
+  height: 104%;
+  margin-top: 40px;
+  /* position: fixed; */
+}
+
+.flex-container.row{flex-direction: row;}
+.flex-container.column{flex-direction: column;}
+.flex-container.row-reverse{flex-direction: row-reverse;}
+.flex-container.column-reverse{flex-direction: column-reverse;}
+.flex-item{
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    text-align: center;
+    color: white;
+}
+
+.color-gray{ background-color: gray; }
+.color-red{ background-color: darksalmon; }
+.color-blue{ background-color: dodgerblue; }
+.color-green{ background-color: forestgreen; }
+.color-yellow{ background-color: gold; }
+.color-pupple{ background-color: rebeccapurple; }
+.color-orange{ background-color: orange; }
+
+#flex-container #videoList video {
+width: 280px;
+height: 112px;
+}
+
+#flex-container #videoList #userNickname {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 10px;
+  margin: auto;
+}
+
+#streamBox {
+  position: relative;
+  width: 80%;
+  height: 104%;
+  display: table; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+#streamBox #streams {
+  width: 100%;
+  height: calc(100% - 51px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#streamBox #streams video {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /*transform: rotateY(180deg);*/
+  /*-webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  /*-moz-transform: rotateY(180deg); /* Firefox */
+}
+
+/*
+#streamBox #streams .people1 {
+  width: 70%;
+  height: 70%;
+}
+
+#streamBox #streams .people2 {
+  width: 47%;
+  height: 47%;
+}
+
+#streamBox #streams .people3,
+#streamBox #streams .people4 {
+  width: 45%;
+  height: 42%;
+}
+
+#streamBox #streams .people5,
+#streamBox #streams .people6 {
+  width: 32%;
+  height: 32%;
+}
+*/
+
+#streamBox #streams #userNickname {
+  margin-top: 5px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-left:inherit;
+}
+
+#streamBox #controlers {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--controler-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#streamBox #controlers #controlers__column {
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#streamBox #controlers #controlers__column:first-child {
+  padding-left: 20px;
+}
+
+#streamBox #controlers #controlers__column:nth-child(2) {
+  justify-content: center;
+}
+
+#streamBox #controlers #controlers__column:last-child {
+  justify-content: flex-end;
+  padding-right: 60px;
+}
+
+#streamBox #controlers select {
+  padding: 7px 12px;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: var(--header-background-color) 0px 7px 29px 0px;
+}
+
+#streamBox #controlers #buttons button {
+  padding: 5px 15px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #buttons button:hover {
+  background-color: #c8cfdf;
+}
+
+#streamBox #controlers #buttons button:first-child {
+  margin-right: 10px;
+}
+
+#streamBox #controlers #buttons .unMuteIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .muteIcon {
+  color: var(--red-icon-color);
+}
+
+#streamBox #controlers #buttons .cameraIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .unCameraIcon {
+  color: var(--red-icon-color);
+}
+
+#streamBox #controlers #buttons .screenIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .unScreenIcon {
+  color: var(--red-icon-color);
+}
+
+/* 전체화면 버튼 */
+#streamBox #controlers #fullScreen {
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  color: var(--header-background-color);
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #fullScreen:hover {
+  background-color: var(--header-background-color);
+  color: white;
+}
+
+#streamBox #controlers #leave {
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: var(--red-icon-color);
+  color: var(--header-background-color);
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #leave:hover {
+  background-color: var(--header-background-color);
+  color: var(--red-icon-color);
+}
+
+#chatRoom {
+  position: relative;
+  width: 25%;
+  height: 104%;
+  background-color: var(--chatBox-background-color);
+}
+
+#chatRoom #chatBox {
+  position: absolute;
+  bottom: 51px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 51px);
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  color: whitesmoke;
+}
+
+#chatRoom #chatBox li {
+  letter-spacing: 1px;
+  margin-bottom: 7px;
+  margin-left : initial;
+}
+
+#chatRoom #chatBox .myChat {
+  opacity: 0.6;
+}
+
+#chatRoom #chatBox .noticeChat {
+  color: aquamarine;
+}
+
+#chatRoom #chatForm {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 38.5px;
+  background-color: #62727b;
+}
+
+#chatRoom #chatForm input {
+  position: relative;
+  width: 83%;
+  height: 100%;
+  padding: 3px 10px;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+#chatRoom #chatForm input::placeholder {
+  color: whitesmoke;
+}
+
+#chatRoom #chatForm input:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#chatRoom #chatForm button {
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  width: 15%;
+  height: 90%;
+  /* letter-spacing: 1px; */
+  text-align: center;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  transition: all 0.25s ease-in-out;
+}
+
+#chatRoom #chatForm button:hover {
+  background-color: #c8cfdf;
+  color: var(--black-color);
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal__box {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: var(--modal-box-color);
+}
+
+.modal__text {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.modal__btn {
+  margin-top: 40px;
+  padding: 5px 30px;
+  background-color: var(--black-color);
+  color: var(--modal-btn-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.25s ease-in-out;
+}
+
+.modal__btn:hover {
+  background-color: var(--modal-btn-color);
+  color: var(--black-color);
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+/*******   반응형   *********/
+@media ( max-width: 1600px ) {
+/* Header */
+header {
+  /* position: fixed; */
+  width: 100%;
+  padding: 0px;
+  z-index: 10;
+  background-color: #fff;
+}
+
+header.active {
+  background-color: #222;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    /* position: fixed; */
+    width: 1480px;
+    height : 110px;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 7px;
+    /* padding-bottom: 25px; */
+}
+
+.logo {
+    position: fixed;
+    float: left;
+    font-size: 28px;
+    padding-left : 5%;
+}
+
+.menu {
+    position: fixed;
+    float: right;
+    padding-top: 25px;
+    line-height: 31px;
+    padding-left: 80%;
+    display : flex;
+    flex-direction: row;
+    justify-content : center;
+    margin-right: 5px;
+}
+
+.menu a {
+    /* position: fixed; */
+    float: left;
+    display: block;
+    margin: 15px;
+    font-size: 22px;
+    color: #222;
+}
+
+body {
+  font-family: 'NEXON Lv2 Gothic', sans-serif;
+  font-size: 18px;
+  line-height: 2.0em;
+  margin: 0;
+  background-color: #222;
+  color: #222;
+  color: var(--black-color);
+}
+
+main { /*방 입장*/
+  border: 3px solid #222;
+  height: 81.5vh;
+  width: 100%;
+  /* height: 85vh; */
+  /* background-color: var(--main-background-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome form {
+  width: 600px;
+  height: 450px;
+  background-color: #adadad;
+  /* border: 2px solid var(--header-background-color); */
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome input {
+  width: 80%;
+  height: 10%;
+  padding: 3px 10px;
+  margin-bottom: 30px;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#welcome input::placeholder {
+  color: whitesmoke;
+}
+
+#welcome input:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#welcome button {
+  width: 80%;
+  height: 10%;
+  margin-top: 10px;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  transition: all 0.1s ease-in-out;
+}
+
+#welcome button:hover {
+  background-color: #c8cfdf;
+  color: var(--black-color);
+}
+
+#public_room {
+  position: relative;
+  overflow-y : auto; /* 스크롤 */
+  overflow-wrap : break-word; /* 스크롤 */
+  top: 7%;
+  color: white;
+  width: 90%;
+  height: 90%;
+  border: 1px solid powderblue;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#public_room h4 {
+  font-size: 22px;
+  text-align: center;
+}
+
+#public_room .chat-rooms { 
+  letter-spacing: 1px;
+}
+
+.call {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.flex-container { /*흰색박스*/
+  display: flex;
+  margin: 5px;
+  border:1px solid var(--chatBox-background-color);
+  border-radius: 10px;
+  background-color: var(--chatBox-background-color);
+  font-size: 24px;
+  position: relative;
+  width: 18%;
+  height: 104%;
+  margin-top: 40px;
+  /* position: fixed; */
+}
+
+.flex-container.row{flex-direction: row;}
+.flex-container.column{flex-direction: column;}
+.flex-container.row-reverse{flex-direction: row-reverse;}
+.flex-container.column-reverse{flex-direction: column-reverse;}
+.flex-item{
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    text-align: center;
+    color: white;
+}
+
+.color-gray{ background-color: gray; }
+.color-red{ background-color: darksalmon; }
+.color-blue{ background-color: dodgerblue; }
+.color-green{ background-color: forestgreen; }
+.color-yellow{ background-color: gold; }
+.color-pupple{ background-color: rebeccapurple; }
+.color-orange{ background-color: orange; }
+
+#flex-container #videoList video {
+width: 240px;
+height: 112px;
+}
+
+#flex-container #videoList #userNickname {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 10px;
+  margin-right: 6%;
+}
+
+#streamBox {
+  position: relative;
+  width: 80%;
+  height: 104%;
+  display: table; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+#streamBox #streams {
+  width: 100%;
+  height: calc(100% - 51px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#streamBox #streams video {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /*transform: rotateY(180deg);*/
+  /*-webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  /*-moz-transform: rotateY(180deg); /* Firefox */
+}
+
+/*
+#streamBox #streams .people1 {
+  width: 70%;
+  height: 70%;
+}
+
+#streamBox #streams .people2 {
+  width: 47%;
+  height: 47%;
+}
+
+#streamBox #streams .people3,
+#streamBox #streams .people4 {
+  width: 45%;
+  height: 42%;
+}
+
+#streamBox #streams .people5,
+#streamBox #streams .people6 {
+  width: 32%;
+  height: 32%;
+}
+*/
+
+#streamBox #streams #userNickname {
+  margin-top: 5px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-left:inherit;
+}
+
+#streamBox #controlers {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--controler-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#streamBox #controlers #controlers__column {
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#streamBox #controlers #controlers__column:first-child {
+  padding-left: 20px;
+}
+
+#streamBox #controlers #controlers__column:nth-child(2) {
+  justify-content: center;
+}
+
+#streamBox #controlers #controlers__column:last-child {
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+#streamBox #controlers select {
+  padding: 7px 12px;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: var(--header-background-color) 0px 7px 29px 0px;
+}
+
+#streamBox #controlers #buttons button {
+  padding: 5px 15px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #buttons button:hover {
+  background-color: #c8cfdf;
+}
+
+#streamBox #controlers #buttons button:first-child {
+  margin-right: 10px;
+}
+
+#streamBox #controlers #buttons .unMuteIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .muteIcon {
+  color: var(--red-icon-color);
+}
+
+#streamBox #controlers #buttons .cameraIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .unCameraIcon {
+  color: var(--red-icon-color);
+}
+
+#streamBox #controlers #buttons .screenIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .unScreenIcon {
+  color: var(--red-icon-color);
+}
+
+/* 전체화면 버튼 */
+#streamBox #controlers #fullScreen {
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  color: var(--header-background-color);
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #fullScreen:hover {
+  background-color: var(--header-background-color);
+  color: white;
+}
+
+#streamBox #controlers #leave {
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: var(--red-icon-color);
+  color: var(--header-background-color);
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #leave:hover {
+  background-color: var(--header-background-color);
+  color: var(--red-icon-color);
+}
+
+#chatRoom {
+  position: relative;
+  width: 25%;
+  height: 104%;
+  background-color: var(--chatBox-background-color);
+}
+
+#chatRoom #chatBox {
+  position: absolute;
+  bottom: 51px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 51px);
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  color: whitesmoke;
+}
+
+#chatRoom #chatBox li {
+  letter-spacing: 1px;
+  margin-bottom: 7px;
+  margin-left : initial;
+}
+
+#chatRoom #chatBox .myChat {
+  opacity: 0.6;
+}
+
+#chatRoom #chatBox .noticeChat {
+  color: aquamarine;
+}
+
+#chatRoom #chatForm {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 38.5px;
+  background-color: #62727b;
+}
+
+#chatRoom #chatForm input {
+  position: relative;
+  width: 83%;
+  height: 100%;
+  padding: 3px 10px;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+#chatRoom #chatForm input::placeholder {
+  color: whitesmoke;
+}
+
+#chatRoom #chatForm input:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#chatRoom #chatForm button {
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  width: 15%;
+  height: 90%;
+  /* letter-spacing: 1px; */
+  text-align: center;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  transition: all 0.25s ease-in-out;
+}
+
+#chatRoom #chatForm button:hover {
+  background-color: #c8cfdf;
+  color: var(--black-color);
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal__box {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: var(--modal-box-color);
+}
+
+.modal__text {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.modal__btn {
+  margin-top: 40px;
+  padding: 5px 30px;
+  background-color: var(--black-color);
+  color: var(--modal-btn-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.25s ease-in-out;
+}
+
+.modal__btn:hover {
+  background-color: var(--modal-btn-color);
+  color: var(--black-color);
+}
+
+.hidden {
+  display: none;
+}
+
+}
+
+
+
+@media ( max-width: 1330px ) {
+/* Header */
+header {
+  /* position: fixed; */
+  width: 100%;
+  padding: 0px;
+  z-index: 10;
+  background-color: #fff;
+}
+
+header.active {
+  background-color: #222;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    /* position: fixed; */
+    width: 1480px;
+    height : 110px;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 7px;
+    /* padding-bottom: 25px; */
+}
+
+.logo {
+    /* position: fixed; */
+    float: left;
+    font-size: 28px;
+    padding-left : 7%;
+}
+
+.menu {
+    position: fixed;
+    float: right;
+    padding-top: 25px;
+    line-height: 31px;
+    padding-right: 32%;
+    display : flex;
+    flex-direction: row;
+    justify-content : center;
+    margin-right: 5px;
+}
+
+.menu a {
+    position: fixed;
+    float: right;
+    padding-right : 33%;
+    display: block;
+    margin: 15px;
+    font-size: 22px;
+    color: #222;
+}
+
+body {
+  font-family: 'NEXON Lv2 Gothic', sans-serif;
+  font-size: 18px;
+  line-height: 2.0em;
+  margin: 0;
+  background-color: #222;
+  color: #222;
+  color: var(--black-color);
+}
+
+main { /*방 입장*/
+  border: 3px solid #222;
+  height: 81.5vh;
+  width: 100%;
+  /* height: 85vh; */
+  /* background-color: var(--main-background-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome form {
+  width: 600px;
+  height: 450px;
+  background-color: #adadad;
+  /* border: 2px solid var(--header-background-color); */
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome input {
+  width: 80%;
+  height: 10%;
+  padding: 3px 10px;
+  margin-bottom: 30px;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#welcome input::placeholder {
+  color: whitesmoke;
+}
+
+#welcome input:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#welcome button {
+  width: 80%;
+  height: 10%;
+  margin-top: 10px;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  transition: all 0.1s ease-in-out;
+}
+
+#welcome button:hover {
+  background-color: #c8cfdf;
+  color: var(--black-color);
+}
+
+#public_room {
+  position: relative;
+  overflow-y : auto; /* 스크롤 */
+  overflow-wrap : break-word; /* 스크롤 */
+  top: 7%;
+  color: white;
+  width: 90%;
+  height: 90%;
+  border: 1px solid powderblue;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+#public_room h4 {
+  font-size: 20px;
+  text-align: center;
+}
+
+#public_room .chat-rooms { 
+  letter-spacing: 1px;
+}
+
+.call {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.flex-container { /*흰색박스*/
+  display: flex;
+  margin: 5px;
+  border:1px solid var(--chatBox-background-color);
+  border-radius: 10px;
+  background-color: var(--chatBox-background-color);
+  font-size: 24px;
+  position: relative;
+  width: 18%;
+  height: 104%;
+  margin-top: 40px;
+  /* position: fixed; */
+}
+
+.flex-container.row{flex-direction: row;}
+.flex-container.column{flex-direction: column;}
+.flex-container.row-reverse{flex-direction: row-reverse;}
+.flex-container.column-reverse{flex-direction: column-reverse;}
+.flex-item{
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    text-align: center;
+    color: white;
+}
+
+.color-gray{ background-color: gray; }
+.color-red{ background-color: darksalmon; }
+.color-blue{ background-color: dodgerblue; }
+.color-green{ background-color: forestgreen; }
+.color-yellow{ background-color: gold; }
+.color-pupple{ background-color: rebeccapurple; }
+.color-orange{ background-color: orange; }
+
+#flex-container #videoList video {
+width: 100%;
+height: 112px;
+}
+
+#flex-container #videoList #userNickname {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 10px;
+  margin-right: 12%;
+  position: fixed;
+  left : 7%;
+  transform: translateX(-50%);
+}
+
+#streamBox {
+  position: relative;
+  width: 80%;
+  height: 104%;
+  display: table; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+#streamBox #streams {
+  width: 100%;
+  height: calc(100% - 51px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#streamBox #streams video {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /*transform: rotateY(180deg);*/
+  /*-webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  /*-moz-transform: rotateY(180deg); /* Firefox */
+}
+
+/*
+#streamBox #streams .people1 {
+  width: 70%;
+  height: 70%;
+}
+
+#streamBox #streams .people2 {
+  width: 47%;
+  height: 47%;
+}
+
+#streamBox #streams .people3,
+#streamBox #streams .people4 {
+  width: 45%;
+  height: 42%;
+}
+
+#streamBox #streams .people5,
+#streamBox #streams .people6 {
+  width: 32%;
+  height: 32%;
+}
+*/
+
+#streamBox #streams #userNickname {
+  margin-top: 5px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-left:inherit;
+}
+
+#streamBox #controlers {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--controler-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#streamBox #controlers #controlers__column {
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#streamBox #controlers #controlers__column:first-child {
+  padding-left: 20px;
+}
+
+#streamBox #controlers #controlers__column:nth-child(2) {
+  justify-content: center;
+}
+
+#streamBox #controlers #controlers__column:last-child {
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+#streamBox #controlers select {
+  padding: 7px 12px;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: var(--header-background-color) 0px 7px 29px 0px;
+}
+
+#streamBox #controlers #buttons button {
+  padding: 5px 15px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #buttons button:hover {
+  background-color: #c8cfdf;
+}
+
+#streamBox #controlers #buttons button:first-child {
+  margin-right: 10px;
+}
+
+#streamBox #controlers #buttons .unMuteIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .muteIcon {
+  color: var(--red-icon-color);
+}
+
+#streamBox #controlers #buttons .cameraIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .unCameraIcon {
+  color: var(--red-icon-color);
+}
+
+#streamBox #controlers #buttons .screenIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .unScreenIcon {
+  color: var(--red-icon-color);
+}
+
+/* 전체화면 버튼 */
+#streamBox #controlers #fullScreen {
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  color: var(--header-background-color);
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #fullScreen:hover {
+  background-color: var(--header-background-color);
+  color: white;
+}
+
+#streamBox #controlers #leave {
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: var(--red-icon-color);
+  color: var(--header-background-color);
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #leave:hover {
+  background-color: var(--header-background-color);
+  color: var(--red-icon-color);
+}
+
+#chatRoom {
+  position: relative;
+  width: 25%;
+  height: 104%;
+  background-color: var(--chatBox-background-color);
+}
+
+#chatRoom #chatBox {
+  position: absolute;
+  bottom: 51px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 51px);
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  color: whitesmoke;
+}
+
+#chatRoom #chatBox li {
+  letter-spacing: 1px;
+  margin-bottom: 7px;
+  margin-left : initial;
+}
+
+#chatRoom #chatBox .myChat {
+  opacity: 0.6;
+}
+
+#chatRoom #chatBox .noticeChat {
+  color: aquamarine;
+}
+
+#chatRoom #chatForm {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 38.5px;
+  background-color: #62727b;
+}
+
+#chatRoom #chatForm input {
+  position: relative;
+  width: 83%;
+  height: 100%;
+  padding: 3px 10px;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+#chatRoom #chatForm input::placeholder {
+  color: whitesmoke;
+}
+
+#chatRoom #chatForm input:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#chatRoom #chatForm button {
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  width: 15%;
+  height: 90%;
+  /* letter-spacing: 1px; */
+  text-align: center;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  transition: all 0.25s ease-in-out;
+}
+
+#chatRoom #chatForm button:hover {
+  background-color: #c8cfdf;
+  color: var(--black-color);
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal__box {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: var(--modal-box-color);
+}
+
+.modal__text {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.modal__btn {
+  margin-top: 40px;
+  padding: 5px 30px;
+  background-color: var(--black-color);
+  color: var(--modal-btn-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.25s ease-in-out;
+}
+
+.modal__btn:hover {
+  background-color: var(--modal-btn-color);
+  color: var(--black-color);
+}
+
+.hidden {
+  display: none;
+}
+
+}
+
+
+
+@media ( max-width: 1024px ) {
+/* Header */
+header {
+  /* position: fixed; */
+  width: 100%;
+  padding: 0px;
+  z-index: 10;
+  background-color: #fff;
+}
+
+header.active {
+  background-color: #222;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    /* position: fixed; */
+    width: 1100px;
+    height : 110px;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 7px;
+    /* padding-bottom: 25px; */
+}
+
+.logo {
+    position: fixed;
+    float: left;
+    font-size: 28px;
+    padding-left : 7%;
+}
+
+.menu {
+    /* position: fixed; */
+    float: right;
+    padding-top: 25px;
+    line-height: 31px;
+    padding-right: 32%;
+    display : flex;
+    flex-direction: row;
+    justify-content : center;
+    margin-right: 5px;
+}
+
+.menu a {
+    position: fixed;
+    float: right;
+    padding-right : 30%;
+    display: block;
+    margin: 15px;
+    font-size: 22px;
+    color: #222;
+}
+
+body {
+  font-family: 'NEXON Lv2 Gothic', sans-serif;
+  font-size: 18px;
+  line-height: 2.0em;
+  margin: 0;
+  background-color: #222;
+  color: #222;
+  color: var(--black-color);
+}
+
+main { /*방 입장*/
+  border: 3px solid #222;
+  height: 81.5vh;
+  width: 100%;
+  /* height: 85vh; */
+  /* background-color: var(--main-background-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome form {
+  width: 600px;
+  height: 450px;
+  background-color: #adadad;
+  /* border: 2px solid var(--header-background-color); */
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome input {
+  width: 80%;
+  height: 10%;
+  padding: 3px 10px;
+  margin-bottom: 30px;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#welcome input::placeholder {
+  color: whitesmoke;
+}
+
+#welcome input:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#welcome button {
+  width: 80%;
+  height: 10%;
+  margin-top: 10px;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  transition: all 0.1s ease-in-out;
+}
+
+#welcome button:hover {
+  background-color: #c8cfdf;
+  color: var(--black-color);
+}
+
+#public_room {
+  position: relative;
+  overflow-y : auto; /* 스크롤 */
+  overflow-wrap : break-word; /* 스크롤 */
+  top: 7%;
+  color: white;
+  width: 90%;
+  height: 90%;
+  border: 1px solid powderblue;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+#public_room h4 {
+  font-size: 17px;
+  text-align: center;
+}
+
+#public_room .chat-rooms { 
+  letter-spacing: 1px;
+}
+
+.call {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.flex-container { /*흰색박스*/
+  display: flex;
+  margin: 5px;
+  border:1px solid var(--chatBox-background-color);
+  border-radius: 10px;
+  background-color: var(--chatBox-background-color);
+  font-size: 24px;
+  position: relative;
+  width: 18%;
+  height: 104%;
+  margin-top: 40px;
+  /* position: fixed; */
+}
+
+.flex-container.row{flex-direction: row;}
+.flex-container.column{flex-direction: column;}
+.flex-container.row-reverse{flex-direction: row-reverse;}
+.flex-container.column-reverse{flex-direction: column-reverse;}
+.flex-item{
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    text-align: center;
+    color: white;
+}
+
+.color-gray{ background-color: gray; }
+.color-red{ background-color: darksalmon; }
+.color-blue{ background-color: dodgerblue; }
+.color-green{ background-color: forestgreen; }
+.color-yellow{ background-color: gold; }
+.color-pupple{ background-color: rebeccapurple; }
+.color-orange{ background-color: orange; }
+
+#flex-container #videoList video {
+width: 100%;
+height: 112px;
+}
+
+#flex-container #videoList #userNickname {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 10px;
+  margin-right: 12%;
+}
+
+#streamBox {
+  position: relative;
+  width: 80%;
+  height: 104%;
+  display: table; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+#streamBox #streams {
+  width: 100%;
+  height: calc(100% - 51px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#streamBox #streams video {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /*transform: rotateY(180deg);*/
+  /*-webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  /*-moz-transform: rotateY(180deg); /* Firefox */
+}
+
+/*
+#streamBox #streams .people1 {
+  width: 70%;
+  height: 70%;
+}
+
+#streamBox #streams .people2 {
+  width: 47%;
+  height: 47%;
+}
+
+#streamBox #streams .people3,
+#streamBox #streams .people4 {
+  width: 45%;
+  height: 42%;
+}
+
+#streamBox #streams .people5,
+#streamBox #streams .people6 {
+  width: 32%;
+  height: 32%;
+}
+*/
+
+#streamBox #streams #userNickname {
+  margin-top: 5px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-left:inherit;
+}
+
+#streamBox #controlers {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--controler-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#streamBox #controlers #controlers__column {
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#streamBox #controlers #controlers__column:first-child {
+  padding-left: 20px;
+}
+
+#streamBox #controlers #controlers__column:nth-child(2) {
+  justify-content: center;
+}
+
+#streamBox #controlers #controlers__column:last-child {
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+#streamBox #controlers select {
+  padding: 7px 12px;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: var(--header-background-color) 0px 7px 29px 0px;
+}
+
+#streamBox #controlers #buttons button {
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #buttons button:hover {
+  background-color: #c8cfdf;
+}
+
+#streamBox #controlers #buttons button:first-child {
+  margin-right: 5px;
+  padding : 1px;
+}
+
+#streamBox #controlers #buttons .unMuteIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .muteIcon {
+  color: var(--red-icon-color);
+}
+
+#streamBox #controlers #buttons .cameraIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .unCameraIcon {
+  color: var(--red-icon-color);
+}
+
+#streamBox #controlers #buttons .screenIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .unScreenIcon {
+  color: var(--red-icon-color);
+}
+
+/* 전체화면 버튼 */
+#streamBox #controlers #fullScreen {
+  padding: 5px 10px;
+  margin-right: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  color: var(--header-background-color);
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #fullScreen:hover {
+  background-color: var(--header-background-color);
+  color: white;
+}
+
+#streamBox #controlers #leave {
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: var(--red-icon-color);
+  color: var(--header-background-color);
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #leave:hover {
+  background-color: var(--header-background-color);
+  color: var(--red-icon-color);
+}
+
+#chatRoom {
+  position: relative;
+  width: 25%;
+  height: 104%;
+  background-color: var(--chatBox-background-color);
+}
+
+#chatRoom #chatBox {
+  position: absolute;
+  bottom: 51px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 51px);
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  color: whitesmoke;
+}
+
+#chatRoom #chatBox li {
+  letter-spacing: 1px;
+  margin-bottom: 7px;
+  margin-left : initial;
+}
+
+#chatRoom #chatBox .myChat {
+  opacity: 0.6;
+}
+
+#chatRoom #chatBox .noticeChat {
+  color: aquamarine;
+}
+
+#chatRoom #chatForm {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 38.5px;
+  background-color: #62727b;
+}
+
+#chatRoom #chatForm input {
+  position: relative;
+  width: 83%;
+  height: 100%;
+  padding: 3px 10px;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 63%;
+  transition: all 0.3s ease-in-out;
+}
+
+#chatRoom #chatForm input::placeholder {
+  color: whitesmoke;
+}
+
+#chatRoom #chatForm input:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#chatRoom #chatForm button {
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  width: 20%;
+  height: 90%;
+  font-size: 10%;
+  /* letter-spacing: 1px; */
+  text-align: center;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  transition: all 0.25s ease-in-out;
+}
+
+#chatRoom #chatForm button:hover {
+  background-color: #c8cfdf;
+  color: var(--black-color);
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal__box {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: var(--modal-box-color);
+}
+
+.modal__text {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.modal__btn {
+  margin-top: 40px;
+  padding: 5px 30px;
+  background-color: var(--black-color);
+  color: var(--modal-btn-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.25s ease-in-out;
+}
+
+.modal__btn:hover {
+  background-color: var(--modal-btn-color);
+  color: var(--black-color);
+}
+
+.hidden {
+  display: none;
+}
+}
+
+
+
+@media ( max-width: 768px ) {
+/* Header */
+header {
+  /* position: fixed; */
+  width: 110%;
+  padding: 0px;
+  z-index: 10;
+  background-color: #fff;
+}
+
+header.active {
+  background-color: #222;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    /* position: fixed; */
+    width: 420px;
+    height : 110px;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 7px;
+    /* padding-bottom: 25px; */
+}
+
+.logo {
+    position: fixed;
+    float: left;
+    font-size: 28px;
+    padding-left : 7%;
+}
+
+.menu {
+    /* position: fixed; */
+    float: right;
+    padding-top: 35px;
+    line-height: 31px;
+    padding-right: 32%;
+    display : flex;
+    flex-direction: row;
+    justify-content : center;
+    margin-right: 5px;
+}
+
+.menu a {
+    position: fixed;
+    float: right;
+    padding-right : 40%;
+    padding-left : 5%;
+    display: block;
+    margin: -30px;
+    font-size: 20px;
+    color: #222;
+}
+
+body {
+  font-family: 'NEXON Lv2 Gothic', sans-serif;
+  font-size: 18px;
+  line-height: 2.0em;
+  margin: 0;
+  background-color: #222;
+  color: #222;
+  color: var(--black-color);
+}
+
+main { /*방 입장*/
+  border: 3px solid #222;
+  height: 81.5vh;
+  width: 100%;
+  /* height: 85vh; */
+  /* background-color: var(--main-background-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome form {
+  width: 200px;
+  height: 250px;
+  background-color: #adadad;
+  /* border: 2px solid var(--header-background-color); */
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome input {
+  width: 80%;
+  height: 10%;
+  padding: 3px 10px;
+  margin-bottom: 30px;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#welcome input::placeholder {
+  color: whitesmoke;
+}
+
+#welcome input:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#welcome button {
+  width: 70%;
+  height: 10%;
+  margin-top: 10px;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  transition: all 0.1s ease-in-out;
+}
+
+#welcome button:hover {
+  background-color: #c8cfdf;
+  color: var(--black-color);
+}
+
+#public_room {
+  position: relative;
+  overflow-y : auto; /* 스크롤 */
+  overflow-wrap : break-word; /* 스크롤 */
+  top: 7%;
+  color: white;
+  width: 150px;
+  height: 80%;
+  border: 1px solid powderblue;
+  border-radius: 5px;
+  font-size: 5px;
+}
+
+#public_room h4 {
+  font-size: 12px;
+  text-align: center;
+}
+
+#public_room .chat-rooms { 
+  letter-spacing: 1px;
+}
+
+.call {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.flex-container { /*회색박스*/
+  display: flex;
+  margin: 5px;
+  border:1px solid var(--chatBox-background-color);
+  border-radius: 10px;
+  background-color: var(--chatBox-background-color);
+  font-size: 24px;
+  position: relative;
+  width: 18%;
+  height: 104%;
+  margin-top: 40px;
+  /* position: fixed; */
+}
+
+.flex-container.row{flex-direction: row;}
+.flex-container.column{
+  flex-direction: column;
+  padding-right : 39%
+}
+.flex-container.row-reverse{flex-direction: row-reverse;}
+.flex-container.column-reverse{flex-direction: column-reverse;}
+.flex-item{
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    text-align: center;
+    color: white;
+}
+
+.color-gray{ background-color: gray; }
+.color-red{ background-color: darksalmon; }
+.color-blue{ background-color: dodgerblue; }
+.color-green{ background-color: forestgreen; }
+.color-yellow{ background-color: gold; }
+.color-pupple{ background-color: rebeccapurple; }
+.color-orange{ background-color: orange; }
+
+#flex-container #videoList video {
+width: 150px;
+height: 160px;
+padding-top : 40px;
+}
+
+#flex-container #videoList #userNickname {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 10px;
+  margin-left: 8%;
+  height : 40px;
+}
+
+#streamBox {
+  position: relative;
+  width: 80%;
+  height: 104%;
+  display: table; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+#streamBox #streams {
+  width: 130%;
+  height: calc(100% - 41px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#streamBox #streams video {
+  width: 1550%;
+  height: 100%;
+  border-radius: 10px;
+  margin-top: 2350%;
+  /*transform: rotateY(180deg);*/
+  /*-webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  /*-moz-transform: rotateY(180deg); /* Firefox */
+}
+
+/*
+#streamBox #streams .people1 {
+  width: 70%;
+  height: 70%;
+}
+
+#streamBox #streams .people2 {
+  width: 47%;
+  height: 47%;
+}
+
+#streamBox #streams .people3,
+#streamBox #streams .people4 {
+  width: 45%;
+  height: 42%;
+}
+
+#streamBox #streams .people5,
+#streamBox #streams .people6 {
+  width: 32%;
+  height: 32%;
+}
+*/
+
+#streamBox #streams #userNickname {
+  margin-top: 5px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-left:inherit;
+}
+
+#streamBox #controlers {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 130%;
+  background-color: var(--controler-background-color);
+  display: inline-grid;
+  padding-left : 2000%;
+  align-items: center;
+  justify-content: end;
+}
+
+#streamBox #controlers #controlers__column {
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#streamBox #controlers #controlers__column:first-child {
+  inline-size: auto;
+  padding-left: 33%;
+}
+
+#streamBox #controlers #controlers__column:nth-child(2) {
+  justify-content: flex-start;
+  padding-top: 5px;
+  padding-left: 15%;
+}
+
+#streamBox #controlers #controlers__column:last-child {
+  justify-content: flex-start;
+  padding-top: 5px;
+  padding-left: 17%;
+}
+
+#streamBox #controlers select {
+  padding: 7px 0px;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: var(--header-background-color) 0px 7px 29px 0px;
+}
+
+#streamBox #controlers #buttons {
+  display : inherit;
+  padding-right : 220px;
+}
+
+#streamBox #controlers #buttons button {
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #buttons button:hover {
+  background-color: #c8cfdf;
+}
+
+#streamBox #controlers #buttons button:first-child {
+  margin-right: 5px;
+  padding : 1px;
+}
+
+#streamBox #controlers #buttons .unMuteIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .muteIcon {
+  color: var(--red-icon-color);
+}
+
+#streamBox #controlers #buttons .cameraIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .unCameraIcon {
+  color: var(--red-icon-color);
+}
+
+#streamBox #controlers #buttons .screenIcon {
+  color: var(--green-icon-color);
+}
+
+#streamBox #controlers #buttons .unScreenIcon {
+  color: var(--red-icon-color);
+}
+
+/* 전체화면 버튼 */
+#streamBox #controlers #fullScreen {
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  color: var(--header-background-color);
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #fullScreen:hover {
+  background-color: var(--header-background-color);
+  color: white;
+}
+
+#streamBox #controlers #leave {
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: var(--red-icon-color);
+  color: var(--header-background-color);
+  transition: all 0.2s ease-in-out;
+}
+
+#streamBox #controlers #leave:hover {
+  background-color: var(--header-background-color);
+  color: var(--red-icon-color);
+}
+
+#chatRoom {
+  position: relative;
+  width: 170%;
+  height: 50%;
+  background-color: var(--chatBox-background-color);
+  padding-right : 90%;
+  margin-top : 2%;
+}
+
+#chatRoom #chatBox {
+  position: absolute;
+  bottom: 11px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 31px);
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  color: whitesmoke;
+}
+
+#chatRoom #chatBox li {
+  letter-spacing: 1px;
+  margin-bottom: 7px;
+  margin-left : initial;
+}
+
+#chatRoom #chatBox .myChat {
+  opacity: 0.6;
+}
+
+#chatRoom #chatBox .noticeChat {
+  color: aquamarine;
+}
+
+#chatRoom #chatForm {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 38.5px;
+  background-color: #62727b;
+}
+
+#chatRoom #chatForm input {
+  position: relative;
+  width: 83%;
+  height: 100%;
+  padding: 3px 10px;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 75%;
+  transition: all 0.3s ease-in-out;
+}
+
+#chatRoom #chatForm input::placeholder {
+  color: whitesmoke;
+}
+
+#chatRoom #chatForm input:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#chatRoom #chatForm button {
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  width: 20%;
+  height: 90%;
+  font-size: 10%;
+  text-align: center;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  transition: all 0.25s ease-in-out;
+}
+
+#chatRoom #chatForm button:hover {
+  background-color: #c8cfdf;
+  color: var(--black-color);
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal__box {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: var(--modal-box-color);
+}
+
+.modal__text {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.modal__btn {
+  margin-top: 40px;
+  padding: 5px 30px;
+  background-color: var(--black-color);
+  color: var(--modal-btn-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.25s ease-in-out;
+}
+
+.modal__btn:hover {
+  background-color: var(--modal-btn-color);
+  color: var(--black-color);
+}
+
+.hidden {
+  display: none;
+}
+
+}

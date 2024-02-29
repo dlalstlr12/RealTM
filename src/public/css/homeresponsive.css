@@ -1,0 +1,414 @@
+/*******   반응형   *********/
+@media ( max-width: 1600px ) {
+    /* Common CSS */
+    * {
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #222;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        font-family: 'NEXON Lv2 Gothic', sans-serif;
+        font-size: 18px;
+        line-height: 2.0em;
+        margin: 0;
+        background-color: #fff;
+        color: #222;
+    }
+    
+    /* Header */
+    header {
+        /* position: fixed; */
+        width: 100%;
+        padding: 0px;
+        z-index: 10;
+    }
+    
+    header.active {
+        background-color: #222;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    .header-inner {
+        /* position: fixed; */
+        width: 1500px;
+        height : 110px;
+        margin: auto;
+        overflow: hidden;
+        padding-top: 7px;
+        /* padding-bottom: 25px; */
+    }
+    
+    .logo {
+        /* position: fixed; */
+        float: left;
+        font-size: 28px;
+        padding-left: 6%;
+    }
+    
+    .nickname {
+        /* position: fixed; */
+        float: right;
+        font-size: 20px;
+        line-height: 5px;
+        padding-top: 30px;
+        padding-right : 13%;
+        /* margin-right: 5px; */
+    }
+    
+    .menu {
+        /* position: fixed; */
+        float: right;
+        padding-top: 25px;
+        line-height: 31px;
+        padding-left: 30%;
+        display : flex;
+        flex-direction: row;
+        justify-content : center;
+        margin-right: 5px;
+    }
+    
+    .menu a {
+        /* position: fixed; */
+        float: left;
+        display: block;
+        margin: 15px;
+        font-size: 22px;
+        color: #222;
+    }
+    
+    /*  welcome  */
+    .welcome {
+        border: 3px solid #f8f5f5;
+        height: 85%;
+        position: relative;
+        padding: 0;
+    }
+    
+    .welcome-heading {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-65%);
+        left: 60px;
+        text-align: center;
+        width: 800px;
+    }
+    
+    .welcome-heading h1 {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 50px;
+        font-weight: 1500;
+        line-height: 2.0em;
+        margin-bottom: 30px;
+        margin-top: 150px;
+        color: #f50606;
+    }
+    
+    .welcome-heading h1 em {
+        display: block;
+        font-style: normal;
+        font-size: 45px;
+        color: #fefafa;
+    }
+    
+     .welcome-heading p {
+        padding: 10 300px;
+        margin-bottom: 20px;
+        color: #fefafa;
+        font-size: 40px;
+    }
+    }
+    
+    
+    
+    /******    반응형    *******/
+    @media ( max-width: 1024px ) {
+    
+    /* Common CSS */
+    * {
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #222;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        font-family: 'NEXON Lv2 Gothic', sans-serif;
+        font-size: 18px;
+        line-height: 2.0em;
+        margin: 0;
+        background-color: #fff;
+        color: #222;
+    }
+    
+    /* Header */
+    header {
+        /* position: fixed; */
+        width: 100%;
+        padding: 0px;
+        z-index: 10;
+    }
+    
+    header.active {
+        background-color: #222;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    .header-inner {
+        /* position: fixed; */
+        width: 790px;
+        height : 110px;
+        margin: auto;
+        overflow: hidden;
+        padding-top: 7px;
+        /* padding-bottom: 25px; */
+    }
+    
+    .logo {
+        /* position: fixed; */
+        float: left;
+        font-size: 25px;
+    }
+    
+    .nickname {
+        /* position: fixed; */
+        float: right;
+        font-size: 15px;
+        line-height: 15px;
+        padding-top: 30px;
+        padding-right : 5%;
+        margin-right: 5px;
+    }
+    
+    .menu {
+        /* position: fixed; */
+        float: right;
+        padding-top: 25px;
+        line-height: 31px;
+        padding-left: 10%;
+        display : flex;
+        flex-direction: row;
+        justify-content : center;
+        margin-right: 5px;
+    }
+    
+    .menu a {
+        /* position: fixed; */
+        float: left;
+        display: block;
+        margin: 15px;
+        font-size: 18px;
+        color: #222;
+    }
+    
+    /*  welcome  */
+    .welcome {
+        border: 3px solid #f8f5f5;
+        height: 85vh;
+        position: relative;
+        padding: 0;
+    }
+    
+    .welcome-heading {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-75%);
+        left: 50px;
+        text-align: center;
+        width: 800px;
+    }
+    
+    .welcome-heading h1 {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 32px;
+        font-weight: 1500;
+        line-height: 2.0em;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        color: #f50606;
+    }
+    
+    .welcome-heading h1 em {
+        display: block;
+        font-style: normal;
+        font-size: 35px;
+        color: #fefafa;
+    }
+    
+     .welcome-heading p {
+        padding: 10 300px;
+        margin-bottom: 20px;
+        color: #100202;
+        font-size: 25px;
+    } 
+    }
+    
+    
+    
+    /********    반응형    **********/
+    @media ( max-width: 768px ) {
+      /* Common CSS */
+    * {
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #222;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        font-family: 'NEXON Lv2 Gothic', sans-serif;
+        font-size: 18px;
+        line-height: 2.0em;
+        margin: 0;
+        background-color: #fff;
+        color: #222;
+    }
+    
+    /* Header */
+    header {
+        /* position: fixed; */
+        width: 100%;
+        padding: 0px;
+        z-index: 10;
+    }
+    
+    header.active {
+        background-color: #222;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    .header-inner {
+        /* position: fixed; */
+        width: 400px;
+        height : 110px;
+        margin: auto;
+        overflow: hidden;
+        padding-top: 7px;
+        /* padding-bottom: 25px; */
+    }
+    
+    .logo {
+        /* position: fixed; */
+        float: right;
+        padding-right : 2%;
+        font-size: 21px;
+        line-height: 45px;
+    }
+    
+    .nickname {
+        /* position: fixed; */
+        float: right;
+        font-size: 15px;
+        line-height: 15px;
+        padding-top: 30px;
+        padding-right : 2%;
+        margin-right: 5px;
+    }
+    
+    .menu {
+        float: none;
+        background-color: #f1eded;
+        position: fixed;
+        height : 110px;
+        width : 245px;
+        top : 0;
+        left : -265px;
+        box-shadow : 3px 0 3px rgba(0, 0, 0, 0.15);
+        padding-top: 0px;
+        padding-left: 15%;
+        transition: 0.5s;
+    }
+    
+    .menu.active {
+        left : 0;
+    }
+    
+    .menu a {
+        /* position: fixed; */
+        display : block;
+        font-size : 10px;
+        line-height: 57px;  
+    }
+    
+    /* Trigger */
+    .trigger {
+        /*border : 1px solid red;*/
+        width : 30px;
+        height : 30px;
+        position : absolute;
+        top : 25px;
+        left : 20px;
+        cursor : pointer;
+        font-size : 26px;
+        text-align: center;
+    }
+    
+    .trigger:before {
+        content : '\e91c';
+        font-family : xeicon;
+    }
+    
+    .trigger.active:before {
+        content : '\e9af';
+    
+    }
+    /*  welcome  */
+    .welcome {
+        border: 3px solid #f8f5f5;
+        height: 75vh;
+        position: relative;
+        padding: 0;
+    }
+    
+    .welcome-heading {
+        position: absolute;
+        top: 25%;
+        transform: translateY(-75%);
+        left: 0px;
+        text-align: inherit;
+        width: 400px;
+    }
+    
+    .welcome-heading h1 {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 20px;
+        font-weight: 1500;
+        line-height: 2.0em;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        color: #f50606;
+    }
+    
+    .welcome-heading h1 em {
+        display: block;
+        font-style: normal;
+        font-size: 22px;
+        color: #fefafa;
+    }
+    
+     .welcome-heading p {
+        padding: 10 300px;
+        margin-bottom: 50px;
+        color: #f7f7f7;
+        font-size: 18px;
+    } 
+    }

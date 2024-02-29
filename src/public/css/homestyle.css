@@ -1,0 +1,137 @@
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Web Fonts - Source Sans Pro */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+/* Web Fonts - NoonNoo */
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Common CSS */
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'NEXON Lv2 Gothic', sans-serif;
+    font-size: 18px;
+    line-height: 2.0em;
+    margin: 0;
+    background-color: #fff;
+    color: #222;
+}
+
+/* Header */
+header {
+    /* position: fixed; */
+    width: 100%;
+    padding: 0px;
+    z-index: 10;
+}
+
+header.active {
+    background-color: #222;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    /* position: fixed; */
+    width: 1480px;
+    height : 110px;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 7px;
+    /* padding-bottom: 25px; */
+}
+
+.logo {
+    /* position: fixed; */
+    float: left;
+    font-size: 28px;
+}
+
+.nickname {
+    /* position: fixed; */
+    float: right;
+    font-size: 20px;
+    line-height: 5px;
+    padding-top: 30px;
+    padding-right : 5px;
+    /* margin-right: 5px; */
+}
+
+.menu {
+    /* position: fixed; */
+    float: right;
+    padding-top: 25px;
+    line-height: 31px;
+    padding-left: 30%;
+    display : flex;
+    flex-direction: row;
+    justify-content : center;
+    margin-right: 5px;
+}
+
+.menu a {
+    /* position: fixed; */
+    float: left;
+    display: block;
+    margin: 15px;
+    font-size: 22px;
+    color: #222;
+}
+
+/*  welcome  */
+.welcome {
+    border: 3px solid #f8f5f5;
+    height: 85vh;
+    position: relative;
+    padding: 0;
+}
+
+.welcome-heading {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-65%);
+    left: 60px;
+    text-align: center;
+    width: 800px;
+}
+
+.welcome-heading h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 50px;
+    font-weight: 1500;
+    line-height: 2.0em;
+    margin-bottom: 30px;
+    margin-top: 150px;
+    color: #f50606;
+}
+
+.welcome-heading h1 em {
+    display: block;
+    font-style: normal;
+    font-size: 45px;
+    color: #fefafa;
+}
+
+ .welcome-heading p {
+    padding: 10 300px;
+    margin-bottom: 20px;
+    color: #fefafa;
+    font-size: 40px;
+} 
