@@ -1,7 +1,6 @@
-# 화상회의 시스템 with WebRTC
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=WebRTC를%20이용한%20화상회의%20시스템&fontSize=50" />
 
-using NodeJS, WebRTC and Websockets
-* * *
+
 ## 프로젝트 소개
 WebRTC를 이용한 화상회의 시스템입니다.
 화상 회의 시스템 시장의 급속한 성장을 통해 원격 소통 솔루션에 대한 수요 증가를 알게되어 WebRTC를 기반으로 한 화상 회의 시스템을 개발하게 되었습니다.
@@ -71,5 +70,3 @@ P2P 통신 방식을 통해 별도의 플러그인 없이 실시간 비디오 �
      npm run dev
 * * *
 
-## 개발 인원
-3명
