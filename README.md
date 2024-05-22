@@ -2,19 +2,26 @@
 
 using NodeJS, WebRTC and Websockets
 * * *
-### 프로젝트 소개
+## 프로젝트 소개
 WebRTC를 이용한 화상회의 시스템입니다.
 화상 회의 시스템 시장의 급속한 성장을 통해 원격 소통 솔루션에 대한 수요 증가를 알게되어 WebRTC를 기반으로 한 화상 회의 시스템을 개발하게 되었습니다.
 P2P 통신 방식을 통해 별도의 플러그인 없이 실시간 비디오 및 오디오 통신을 가능하게 하여 실시간 화상공유를 통해 회의를 진행할 수 있습니다.
 * * *
 
 
-### 사용한 기술	스택
-JavaScript(Node.js), Socket.IO, WebRTC, HTML, CSS, MySQL
+## 사용한 기술	스택
+  <img src="https://img.shields.io/badge/WebRTC-333333?style=flat&logo=WebRTC&logoColor=white" />
+  <img src="https://img.shields.io/badge/Socket.io-010101?style=flat&logo=Socket.io&logoColor=white" />
+	<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-5FA04E?style=flat&logo=Node.js&logoColor=white" />
+	<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
+	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white" />
+
 * * *
 
 
-### 주요 기능
+## 주요 기능
 <details>
   <summary>메인화면</summary>
   <img src="https://github.com/dlalstlr12/RealTM/assets/101045853/75791204-b683-4808-9a4f-f07a34059871">   
@@ -58,11 +65,11 @@ JavaScript(Node.js), Socket.IO, WebRTC, HTML, CSS, MySQL
 
 * * *
 
-### 개발 환경
+## 개발 환경
      npm install
      
      npm run dev
 * * *
 
-### 개발 인원
+## 개발 인원
 3명
